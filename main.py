@@ -21,6 +21,11 @@ def show_movies():
         show_movie_list(movie)
 
         
+def show_movie_list(movie):
+    print(f"Name :- {movie['name']} ")
+    print(f"Type :- {movie['type']}")
+    print(f"Rating :- {movie['rating']}")
+    print("")
 
 
 menu()
