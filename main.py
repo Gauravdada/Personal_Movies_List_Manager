@@ -16,6 +16,9 @@ def menu():
         user_input = input("Enter 'a' to add movie, 'l' to see your movies, 'f' to find movie, 'q' to quit: ")
 
 
+def show_movies():
+    for movie in movies:
+        show_movie_list(movie)
 
         
 
