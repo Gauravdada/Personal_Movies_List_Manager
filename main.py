@@ -1,14 +1,6 @@
 
 movies = []
 
-"""
-movie = {
-    'name': ... (str),
-    'director': ... (str),
-    'year': ... (int)
-}
-"""
-
 
 def menu():
     user_input = input("Enter 'a' to add a movie, 'l' to see your movies, 'f' to find a movie, and 'q' to quit: ")
@@ -28,13 +20,11 @@ def menu():
 
 def add_movie():
     name = input('Enter the movie name: ')
-    director = input('Enter the movie director: ')
-    year = input('Enter the movie release year: ')
+    rating = input('Enter your personal rating: ')
 
     movies.append({
         'name': name,
-        'director': director,
-        'year': year
+        'rating': rating
     })
 
 
@@ -45,12 +35,11 @@ def show_movies(movies_list):
 
 def show_movie_details(movie):
     print(f"Name: {movie['name']}")
-    print(f"Director: {movie['director']}")
-    print(f"Release year: {movie['year']}")
+    print(f"Rating: {movie['rating']}")
 
 
 def find_movie():
-    find_by = input("What property of the movie are you looking for? ")  # one of 'year', 'name', or 'director'
+    find_by = input("What property of the movie are you looking for? ")  
     looking_for = input("What are you searching for? ")
 
     found_movies = find_by_attribute(movies, looking_for, lambda x: x[find_by])
